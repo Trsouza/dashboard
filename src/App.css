@@ -1,0 +1,12 @@
+@import '~antd/dist/antd.css';
+
+h1 {
+  color: white;
+}
+
+.app {
+  display: flex;
+  background-color: #022342;
+  min-height: auto;
+  height: 100vh;
+}

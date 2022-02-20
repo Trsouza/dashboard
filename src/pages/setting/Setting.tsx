@@ -138,8 +138,8 @@ export const Setting = () => {
 
 
   useEffect(() => {
-    componentDidMount();
-    agrupaMeses();
+    //componentDidMount();
+    //agrupaMeses();
   }, [agrupaMeses]);
 
     return (

@@ -1,12 +1,115 @@
 @import '~antd/dist/antd.css';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body{
+  font-family: 'Rubik', sans-serif;
+}
+
+/*  */
+
 
 h1 {
   color: white;
 }
 
 .app {
-  display: flex;
-  background-color: #022342;
+  /* display: grid;
+  background-color: #b1c4b4b7;
   min-height: auto;
-  height: 100vh;
+  height: 100vh; */
+}
+
+
+.ant-layout-header, .ant-layout-sider {
+  background: #17303D;
+}
+
+.ant-menu.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub,
+.ant-menu.ant-menu-dark .ant-menu-sub {
+  color: #54B4E7;
+  background: #17303D;
+}
+
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #0e212a;
+}
+
+.ant-menu-dark .ant-menu-item:hover {
+  background-color: #0e212a !important;
+}
+
+.sidebar_active {
+  background-color: #0e212a;
+}
+
+.tabs {
+  /* margin: 20px 20px 20px 220px; */
+  margin: 20px 20px 20px 0px;
+  text-align: center;
+  /* width: 100vw; */
+}
+
+.tab_active {
+  color:#365262!important;
+  text-decoration: underline!important;
+}
+
+.tab-nav {
+  text-align: center;
+  margin-top:20px;
+  margin-bottom:60px;   
+ }
+
+ .tab-nav a {    
+     color:#658387;
+     font-size:20px;
+     font-weight: 500;
+     padding:20px;
+     text-decoration: none;
+ }
+
+ 
+ .ant-carousel .slick-dots li button {
+  width: 12px;
+  height: 12px;
+  background: #49ed64;
+  border-radius: 50px;
+  margin-top: 30px;
+}
+
+.ant-carousel .slick-dots li.slick-active button {
+  background: #185222;
+}
+.ant-carousel .slick-dots li.slick-active,
+.ant-carousel .slick-dots li {
+  width: 20px;
+  
 }

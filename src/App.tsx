@@ -6,8 +6,9 @@ function App() {
   
   return (
    <div className="app">
-      <Sidebar />
-      <AppRoutes/>
+      <Sidebar>
+        <AppRoutes/>
+      </Sidebar>
     </div>
   );
 }

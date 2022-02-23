@@ -36,7 +36,10 @@ body{
 
 
 h1 {
-  color: white;
+  color: #0e212a;
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 .app {

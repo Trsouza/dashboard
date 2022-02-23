@@ -1,9 +1,13 @@
 //import { useNavigate } from "react-router-dom";
+import { Carousel, Space } from "antd";
 import { useEffect, useState } from "react";
+import { DonutCustom } from "../../components/apex/DonutCustom";
+import CarrouselApexCustom from "../../components/carousel/CarouselApexCustom";
 import { DoughnutChart } from "../../components/chart/DoughnutChart";
+import MonthlySummary from "../../components/modal/MonthlySummary";
 import api from "../../service/api";
 
-export function Home() {
+export function Home(props: any) {
   //const navigate = useNavigate();
 
   let montarData = {};
@@ -12,59 +16,37 @@ export function Home() {
   const [meses, setMeses] = useState<any[]>([]);
 
   const dailyQuote = async () => {
-    let list = [];
-    let day = 15;
 
-    for (let x = 0; x < 3; x++) {
-      const response = await api.get(`BTC/day-summary/2022/02/${day}`);
-      console.log(response.data)
-      list.push(response.data);
-      day++;
+    try {
+      let list = [];
+      const currentDate = new Date();
+      const currentDay = String(currentDate.getDate()).padStart(2, '0');
+      let day = parseInt(currentDay);
+  
+      for (let x = 0; x < 6; x++) {
+        const response = await api.get(`BTC/day-summary/2022/02/${day-1}`);
+        list.push(response.data);
+        day--;
+      }
+      setState(list);
+    } catch (e) {
+      console.error(e)
     }
-    setState(list)
-  }
 
-  // const montarData2 = {
-  //     day: 18,
-  //     data: [10000-state[0]?.amount, state[0]?.amount]
- 
-  //}
+  };
 
   useEffect(() => {
     dailyQuote();
   }, []);
 
-
   return (
-    <div>
-      <header>
-        <h1>Tela Home</h1>
-        {/* <nav>
-            <div><button onClick={() => navigate("/")}>Home</button></div>
-            <div><button onClick={() => navigate("/settings")}>Settings</button></div>
-          </nav> */}
-      </header>
-
-     <div style={{display: "flex"}}>
-      {console.log(state, " state")}
-      {state?.map((item: any, index: number) => {
-            return (
-              <>
-              <DoughnutChart 
-                key={index}
-                data={{
-                  day: 18,
-                  data: [10000-item?.amount, item?.amount]
-                }}>
-              </DoughnutChart>
-
-        
-              </>
-            );
-        })}
-     
-     </div>
-   
-    </div>
+    <>
+      <div className="tabs">
+        <header>
+          <h1>Weekly overview</h1>
+        </header>
+        <CarrouselApexCustom dataset={state}></CarrouselApexCustom>
+      </div>
+    </>
   );
 }

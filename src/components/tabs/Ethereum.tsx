@@ -8,11 +8,13 @@ const Ethereum = () => {
   const dailyQuote = async () => {
     let list = [];
     const currentDate = new Date();
-    const currentDay = String(currentDate.getDate()).padStart(2, '0');
-    let day = parseInt(currentDay);
+   // const currentDay = String(currentDate.getDate()).padStart(2, '0');
+    let day = currentDate.getDate();
+    let month = currentDate.getMonth();
+    let year = currentDate.getFullYear();
 
     for (let x = 0; x < 6; x++) {
-      const response = await api.get(`BTC/day-summary/2022/02/${day-1}`);
+      const response = await api.get(`ETH/day-summary/${year}/${month}/${day-1}`);
       //console.log(response.data);
       list.push(response.data);
       day--;
@@ -26,23 +28,7 @@ const Ethereum = () => {
 
   return (
     <>
-    <CarrouselCustom dataset={state}/>
-      {/* <div className="tab2"> </div>
-
-      <div style={{ display: "flex" }}>
-        {console.log(state, " state")}
-        {state?.map((item: any, index: number) => {
-          return (
-            <DoughnutChart
-              key={index}
-              data={{
-                day: 18,
-                data: [10000 - item?.amount, item?.amount],
-              }}
-            ></DoughnutChart>
-          );
-        })}
-      </div> */}
+     <CarrouselCustom dataset={state}/> 
     </>
   );
 };

@@ -19,7 +19,7 @@ const { Content } = Layout;
 const Sidebar: React.FC<IProps> = ({ children }) => {
  
   //const navigate = useNavigate();
-  const location = useLocation()
+  const location = useLocation();
 
   // So in v5, you can have:
   // import { useHistory } from "react-router-dom";

@@ -1,4 +1,5 @@
 import React from "react";
+import { DonutCustom } from "../apex/DonutCustom";
 import { DonutChartCustom } from "../chart/DonutChartCustom";
 
 const Cardano = () => {
@@ -7,8 +8,9 @@ const Cardano = () => {
       <div className="tab3"> </div>
       <div style={{}}>
        
-      <DonutChartCustom >
-      </DonutChartCustom>
+      {/* <DonutChartCustom/> */}
+
+      {/* <DonutCustom/> */}
 
      </div>
     </>

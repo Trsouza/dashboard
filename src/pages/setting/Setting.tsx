@@ -138,9 +138,8 @@ export const Setting = () => {
 
 
   useEffect(() => {
-    //componentDidMount();
-    //agrupaMeses();
-  }, [agrupaMeses]);
+
+  }, []);
 
     return (
       <>
@@ -148,24 +147,12 @@ export const Setting = () => {
         <nav>
           {/* <div><button onClick={() => navigate("/")}>Home</button></div>
           <div><button onClick={() => navigate("/settings")}>Settings</button></div> */}
-          <div><button onClick={() => agrupaMeses()}>Agrupa</button></div>
+          {/* <div><button onClick={() => agrupaMeses()}>Agrupa</button></div> */}
         
           {/* <div>{JSON.stringify(state)}</div> */}
 
         </nav>
-    
-      <DoughnutChart
-      data={montarData}
-      
-      ></DoughnutChart>
-
-      {/* <div>
-        {state.map((item, index) => {
-            return (
-              <div key={index}> {item.data}</div>
-            );
-        })}
-      </div> */}
+  
       
       </>
       )

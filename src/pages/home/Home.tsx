@@ -5,7 +5,7 @@ import { DonutCustom } from "../../components/apex/DonutCustom";
 import CarrouselApexCustom from "../../components/carousel/CarouselApexCustom";
 import { DoughnutChart } from "../../components/chart/DoughnutChart";
 import MonthlySummary from "../../components/modal/MonthlySummary";
-import api from "../../service/api";
+import api from "../../services/api";
 
 export function Home(props: any) {
   //const navigate = useNavigate();

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import api from "../../service/api";
+import api from "../../services/api";
 import CarrouselCustom from "../carousel/CarouselCustom";
 
 const Bitcoin = () => {

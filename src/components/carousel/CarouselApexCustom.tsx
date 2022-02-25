@@ -56,7 +56,7 @@ const CarrouselApexCustom = (props: any) => {
               if (index >= 3) {
               return (
                   <Space className="div-dou" key={index}>
-                    <div >
+                    <div onClick={showModal} style={{cursor: "pointer"}}>
                       <span>{dateResult[1] + "/" + dateResult[2]}</span>
                       <DonutCustom
                         data={{

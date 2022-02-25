@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 //import { useNavigate } from "react-router-dom";
-import api from '../../service/api';
+import api from '../../services/api';
 import { DoughnutChart } from "../../components/chart/DoughnutChart";
 
 interface IBolsa {

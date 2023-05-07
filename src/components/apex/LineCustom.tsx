@@ -7,7 +7,40 @@ export function LineCustom() {
 
 const options: ApexOptions = {
     chart: {
-      height: 350,
+      toolbar: {
+        //show: true,
+        //offsetX: 0,
+        //offsetY: 0,
+        tools: {
+          download: '<img src="../../../static/c.png" width="20">' ,
+          selection: true,
+          zoom: true,
+          zoomin: true,
+          zoomout: true,
+          pan: true,
+          reset: true,
+          customIcons: []
+        },
+        export: {
+          csv: {
+            // filename: undefined,
+            // columnDelimiter: ',',
+            // headerCategory: 'category',
+            // headerValue: 'value',
+            // dateFormatter(timestamp) {
+            //   return new Date(timestamp).toDateString()
+            // }
+          },
+          svg: {
+            filename: "undefined",
+          },
+          png: {
+            filename: undefined,
+          }
+        },
+        autoSelected: 'zoom' 
+      },
+      //height: 350,
       type: 'line',
       zoom: {
         enabled: false

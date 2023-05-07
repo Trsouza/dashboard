@@ -19,6 +19,11 @@ const CarrouselApexCustom = (props: any) => {
     setIsModalVisible(false);
   };
 
+  const handleCancel2 = () => {
+    const isModalVisible = "kk";
+    console.log(isModalVisible)
+  };
+
   return (
     <>
       <div className="tab1" style={{ display: "" }}>

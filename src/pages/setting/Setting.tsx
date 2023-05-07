@@ -146,8 +146,7 @@ export const Setting = () => {
         <h1>Tela Settings</h1>
         <nav>
           {/* <div><button onClick={() => navigate("/")}>Home</button></div>
-          <div><button onClick={() => navigate("/settings")}>Settings</button></div> */}
-          {/* <div><button onClick={() => agrupaMeses()}>Agrupa</button></div> */}
+          <div><button onClick={() => navigate("/settings")}>Settings</button></div> */}y
         
           {/* <div>{JSON.stringify(state)}</div> */}
 

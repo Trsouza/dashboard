@@ -7,6 +7,7 @@ import Cardano from '../components/tabs/Cardano';
 import Tabs from '../components/tabs/Tabs';
 import { Home } from "../pages/home/Home";
 import { Setting } from "../pages/setting/Setting";
+import { Index } from '../pages/teste';
 
 export const AppRoutes = () => {
     return (  
@@ -14,7 +15,8 @@ export const AppRoutes = () => {
             <Route path="/" element={<InnerContent/>}>
                 <Route path="/" element={<Navigate replace to="home" />}/>
                 <Route path="home" element={<Home/>}/>              
-                <Route path="settings" element={<Setting/>}/>                          
+                <Route path="settings" element={<Setting/>}/>     
+                <Route path="index" element={<Index/>}/>                       
             </Route>
             <Route path="coins" element={<Tabs/>}>
                 <Route path="/coins" element={<Navigate replace to="btc" />}/>

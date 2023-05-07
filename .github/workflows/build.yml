@@ -1,3 +1,6 @@
+
+name: Sonar
+
 on:
   push:
     branches:
@@ -38,11 +41,9 @@ jobs:
       - name: Run SonarCloud analysis
         uses: SonarSource/sonarcloud-github-action@master
         with:
-          args: >
-            -Dsonar.sources=.
+          args:
             -Dsonar.projectKey=Trsouza_dashboard
             -Dsonar.organization=trsouza
-            -Dsonar.host.url=https://sonarcloud.io
 
 
 

@@ -40,7 +40,7 @@ jobs:
         with:
           args: >
             -Dsonar.sources=.
-            -Dsonar.projectKey=Trsouza_delivery-manager-front
+            -Dsonar.projectKey=Trsouza_dashboard
             -Dsonar.organization=trsouza
             -Dsonar.host.url=https://sonarcloud.io
 
